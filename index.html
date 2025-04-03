@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fourch est, livraison de repas a domicile, cuisine lorraine, alsace, grand est"
+    />
+    <meta
+      name="description"
+      content="Les meilleurs restaurants du Grand Est, livrés chez vous ! Trouvez facilement des adresses incontournables avec des options végétariennes et locales."
+    />
+    <link rel="icon" type="image/x-icon" href="assetes\images\favicon.ico" />
+    <meta name="author" content="Wilders Grand'EST" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>FourchEst | HomePage</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="relative flex items-center justify-center">
+        <a class="focus:" href="log.html"
+          ><svg
+            class="h-8 text-white absolute top-2 right-0 w-10"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="black"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            /></svg
+        ></a>
+
+        <img
+          src="/assetes/images/FourchEst_Logo.png"
+          alt="logo Fourch'Est"
+          class="mt-5 mb-7 w-50 flex"
+        />
+      </nav>
+      <h1 class="text-center text-2xl">
+        Vos plats régionaux, <br />
+        livres chez vous !
+      </h1>
+    </header>
+
+    <!---------------------------Bar de recherche--------------------->
+    <section class="flex flex-col items-center md:flex-row md:justify-between mx-5 mt-5 space-y-5 md:space-y-0">
+      <!-- Image de Gauche -->
+      <img
+        src="assetes/images/macaronBanniere.png"
+        alt="images du macaron"
+        class="hidden md:block md:w-40 md:h-40 lg:w-48 lg:h-48"
+      />
+    
+      <form
+        action="./restaurant.html"
+        class="w-full md:w-2/3 lg:w-1/2 relative shadow-xl"
+      >
+        <label
+          for="default-search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+          >
+            <svg
+              class="w-5 h-5 text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <select
+            id="default-search"
+            class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 hover:border-blue-400 appearance-none transition duration-200"
+            aria-label="Select a position"
+            required
+          >
+            <option value="" disabled selected hidden>
+            Sélectionnez une ville...
+            </option>
+            <option value="Metz">Metz</option>
+            <option value="Nancy">Nancy</option>
+            <option value="Strasbourg">Strasbourg</option>
+            <option value="Reims">Reims</option>
+          </select>
+    
+          <button
+            type="submit"
+            class="text-white absolute right-2.5 bottom-2.5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm px-4 py-2"
+          >
+            Recherche
+          </button>
+        </div>
+      </form>
+    
+      <!-- Image de droite -->
+      <img
+        src="assetes/images/burgerdesktop.png"
+        alt="image du burger"
+        class="hidden md:block md:w-40 md:h-40 lg:w-48 lg:h-48"
+      />
+    </section>
+
+    <!---------------------------CAROUSEL--------------------------->
+
+    <div
+      class="carousel-container overflow-hidden"
+    >
+      <div
+        class="carousel-track"
+      ></div>
+    </div>
+
+    <!---------------------------Cartes----------------------------->
+
+    <section
+      class="flex flex-col mx-auto md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 "
+    >
+      <div
+        class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden group"
+      >
+        <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
+          Livraison rapide
+        </h2>
+        <div class="relative flex justify-center p-1">
+          <img
+            src="assetes/images/fast_delivery.jpg"
+            class="w-40 h-40 rounded-2xl md:group-hover:opacity-0 md:transition-opacity md:duration-300"
+            alt="Livraison rapide" 
+            id="image-1"
+          />
+          <p
+      class="hidden md:block md:absolute md:top-0 md:left-0 md:w-full md:h-full pt-5 text-center text-sm font-bold text-gray-800 bg-white/90 rounded-2xl px-3 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300"
+      id="message-1"
+    >
+          Besoin de votre repas rapidement ? 
+          <br>Nous livrons en un temps record pour
+          que vous puissiez savourer vos plats préférés sans attendre. 
+          <br>Frais, chaud
+          et directement à votre porte !
+        </p>
+        </div>
+        <div class="p-5 text-center">
+          <button
+            class="toggle-button md:hidden px-4 p-2 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm text-center me-2 mb-2"
+            data-target="message-1"
+            data-image="image-1"
+          >
+            En savoir plus
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden group"
+      >
+        <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
+          Economies
+        </h2>
+        <div class="relative flex justify-center p-1">
+          <img
+            src="assetes/images/money_savings.jpg"
+            class="w-40 h-40 rounded-2xl md:group-hover:opacity-0 md:transition-opacity md:duration-300"
+            alt="Livraison rapide"
+            id="image-2"
+          />
+          <p
+      class="hidden md:block md:absolute md:top-0 md:left-0 md:w-full md:h-full text-center text-sm font-bold rounded-2xl px-3 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300"
+      id="message-2"
+    >
+    <br>Régalez-vous avec des plats savoureux à des prix imbattables.
+    <br>Profitez d'offres exclusives et de frais de livraison réduits pour un plaisir gourmand sans compromis !
+        </p> 
+        </div>
+        
+        <div class="p-5 text-center">
+          <button
+            class="toggle-button md:hidden px-4 p-2 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm text-center me-2 mb-2"
+            data-target="message-2"
+            data-image="image-2"
+          >
+            En savoir plus
+          </button>
+        </div>
+      </div>
+
+      <div
+  class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden group"
+>
+  <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
+    Savourez l’authenticité
+  </h2>
+  <div class="relative flex justify-center p-1">
+    <img
+      src="assetes/images/gardener.jpg"
+      class="w-40 h-40 rounded-2xl md:group-hover:opacity-0 md:transition-opacity md:duration-300"
+      id="image-3"
+      alt="Livraison rapide"
+    />
+    <p
+      class="hidden md:block md:absolute md:top-0 md:left-0 md:w-full md:h-full pt-5 text-center text-sm font-bold text-gray-800 bg-white/90 rounded-2xl px-3 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300"
+      id="message-3"
+    >
+    Savourez de délicieux plats préparés avec des ingrédients frais et locaux.
+<br>Découvrez et mettez à l’honneur le savoir-faire de notre région.
+<br>Un merveilleux voyage culinaire !
+    </p>
+  </div>
+  <div class="p-5 text-center">
+    <button
+      class="toggle-button md:hidden px-4 p-2 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm text-center me-2 mb-2"
+      data-target="message-3"
+      data-image="image-3"
+    >
+      En savoir plus
+    </button>
+  </div>
+      </div>
+
+      <div
+        class="max-w-sm m-10 bg-white/95 border-3 border-gray-200 rounded-xl shadow-2xl overflow-hidden group"
+      >
+        <h2 class="text-lg font-bold text-gray-800 mb-2 text-center pt-5">
+          Garantie
+        </h2>
+        <div class="relative flex justify-center p-1">
+          <img
+            src="assetes/images/garantie_thumbs_up.png"
+            class="w-55 h-40 rounded-2xl md:group-hover:opacity-0 md:transition-opacity md:duration-300"
+            alt="Livraison rapide"
+            id="image-4"
+          />
+          <p
+      class="hidden md:block md:absolute md:top-0 md:left-0 md:w-full md:h-full text-center text-sm font-bold rounded-2xl px-3 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300"
+      id="message-4"
+    >
+    Nous assurons une livraison fiable et sécurisée. En cas de retard ou de problème, 
+    <br>nous intervenons rapidement pour une solution efficace. 
+    <br>Votre satisfaction est notre priorité !
+        </p> 
+        </div>
+        
+        <div class="p-5 text-center">
+          <button
+            class="toggle-button md:hidden px-4 p-2 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br shadow-lg shadow-blue-500/50 font-medium rounded-lg text-sm text-center me-2 mb-2"
+            data-target="message-4"
+            data-image="image-4"
+          >
+            En savoir plus
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------Testimonials--------------------------->
+
+    <section class="bg-white/95 border-3 border-gray-200 rounded-lg shadow-lg p-6 mb-10 mx-auto max-w-4xl">
+  
+      <div class="text-center mb-6">
+        <h2 class="text-2xl font-bold text-gray-800">Note des clients</h2>
+        <div class="flex justify-center items-center mt-4">
+
+          <svg class="w-4 h-4 md:w-6 md:h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+          </svg>
+          <svg class="w-4 h-4 md:w-6 md:h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+          </svg>
+          <svg class="w-4 h-4 md:w-6 md:h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+          </svg>
+          <svg class="w-4 h-4 md:w-6 md:h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+          </svg>
+          <svg class="w-4 h-4 md:w-6 md:h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+          </svg>
+        </div>
+        <p class="text-gray-500 text-sm mt-2">4 sur 5 (1,745 notes)</p>
+      </div>
+    
+
+      <div class=" space-y-4">
+
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">5 étoiles</span>
+          <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
+            <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 60%"></div>
+          </div>
+          <span class="text-sm font-medium text-gray-700">60%</span>
+        </div>
+        <!-- 4 Stars -->
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">4 étoiles</span>
+          <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
+            <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 10%"></div>
+          </div>
+          <span class="text-sm font-medium text-gray-700">10%</span>
+        </div>
+        <!-- 3 Stars -->
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">3 étoiles</span>
+          <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
+            <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 10%"></div>
+          </div>
+          <span class="text-sm font-medium text-gray-700">10%</span>
+        </div>
+        <!-- 2 Stars -->
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">2 étoiles</span>
+          <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
+            <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 10%"></div>
+          </div>
+          <span class="text-sm font-medium text-gray-700">10%</span>
+        </div>
+        <!-- 1 Star -->
+        <div class="flex justify-between items-center">
+          <span class="text-sm font-medium text-gray-700">1 étoile</span>
+          <div class="w-1/2 h-5 mx-4 bg-gray-200 rounded-full">
+            <div class="h-5 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-full" style="width: 10%"></div>
+          </div>
+          <span class="text-sm font-medium text-gray-700">10%</span>
+        </div>
+      </div>
+    </section>
+     
+
+
+      
+
+    <!---------------------------Footer--------------------------->
+
+    <footer class="text-black border-t border-black bg-white/95 py-4">
+      <div class="w-full flex justify-between items-center px-4">
+        <!-- Copyright -->
+        <div class="flex justify-start">
+          <p class="text-xs font-medium md:text-xl">&copy; 2025</p>
+        </div>
+
+        <!-- Mentions -->
+        <div class="flex-grow flex justify-center">
+          <a href="about.html" class="text-[#191998] font-normal text-sm
+         hover:underline bg-white p-1 rounded-full ">
+          Mentions légales
+        </a>
+        </div>
+
+        <!-- Icons -->
+        <div class="flex justify-end space-x-4">
+          <a href="#" class="hover:text-blue-500">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a href="#" class="hover:text-blue-400">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./index.js"></script>
+
+     <!---------------------------Background--------------------->
+  <script>
+    const icons = [
+      // Fourchette
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zm4 0a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zm4 0a1 1 0 0 0-1 1v4a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1zM6 10v2a2 2 0 0 0 2 2v9a1 1 0 1 0 2 0v-9a2 2 0 0 0 2-2v-2H6z"/></svg>',
+      // Pizza
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 2S6.5 3.5 3 21c7.5-2.7 14.6-9.1 18-18zM7.5 19.5l1.1-3.9 2.3 2.3-3.4 1.6zm7.5-6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>',
+      // Eponge
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a4 4 0 0 0-4 4c0 1.3.6 2.5 1.5 3.2V20a1 1 0 0 0 2 0V9.2A4 4 0 0 0 12 2z"/></svg>',
+      // Couteau
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 2l13 13-4 4L2 6l1-4z"/></svg>',
+      // Verre de vin
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 2h8l-1 8H9L8 2zm2 10h4v9h-4v-9z"/></svg>',
+      // tasse de café
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h2a2 2 0 0 1 0 4h-2V8zM2 6h16v6a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6V6zm2 14h12v2H4v-2z"/></svg>',
+      // Pain
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6c0-1.1.9-2 2-2h12a2 2 0 0 1 0 4H4V6z"/></svg>',
+      // Oeuf
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.1 2 4 10 4 14a8 8 0 0 0 16 0c0-4-4.1-12-8-12z"/></svg>',
+      // Glace
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 0 0-5 5 5 5 0 0 0 .3 1.7A4.5 4.5 0 0 0 6 12h12a4.5 4.5 0 0 0-1.3-3.3A5 5 0 0 0 12 2zm0 13l-2 5h4l-2-5z"/></svg>',
+      
+    ];
+
+    const pageHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    const numIcons = 150;
+
+    for (let i = 0; i < numIcons; i++) {
+      const icon = document.createElement('div');
+      icon.classList.add('icon');
+      if (Math.random() > 0.5) icon.classList.add('alt');
+      icon.style.top = Math.random() * pageHeight + 'px';
+      icon.style.left = Math.random() * 100 + 'vw';
+      icon.style.animationDelay = `${Math.random() * 0}s, ${Math.random() * 0}s`;
+      const size = 20 + Math.random() * 40;
+      icon.style.width = size + 'px';
+      icon.style.height = size + 'px';
+      icon.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+      document.body.appendChild(icon);
+    }
+  </script>
+  </body>
+</html>

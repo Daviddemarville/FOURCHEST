@@ -1,0 +1,38 @@
+Jusqu'à maintenant notre utilisateur est toujours anonyme, il viens de choisir le restaurant dans lequel il veut commander.
+
+Il accède donc à une page sur laquelle il pourra voir les plats proposé par le restaurant.
+
+Il choisi ces plats, ces quantités et automatiquement les produits seront ajouté au panier qui est a droite.
+
+C'est la, que la stratégie a tous son sens, l'utilisateur  est venu par curiosité sur le site en ce disant "Qu'est ce que je pourrais manger ce midi?"
+Sans la moindre contrainte, nous l'avons conduit à trouver un restaurant, à remplir un panier, nous avons donc créer un besoins car notre utilisateur maintenant ne se demande plus se qu'il pourrait manger, mais "J'ai envie de manger ces plats!"
+
+L'utilisateur va donc en bas de son panier cliquer sur "COMMANDER" qui l'amènera vers une page ou il pourra créer son compte pour finaliser la vente.
+
+Si l'utilisateur  est déjà connecté, nous avons prévu une page ou il pourra modifier son compte que va vous présenter maintenant Arnaud
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Comme mes collègues l'ont déjà dit a plusieurs reprises le site a été entièrement pensé de manière responsif jusqu'aux pages plus technique comme la gestion de votre compte que vous voyez sur mon écran de droite.
+
+Avant d'en arrivé la, si ce n'est pas déjà fait, vous passerez par une page de log. Vous entrez votre adresse e mail………. et votre mot de passe…….
+
+Ha je me suis trompé… mais comme vous pouvez le constater nous avons dépensé sans compter pour sécurisé vos comptes.
+
+On recommence l'adresse mail, le mot de passe et nous voila sur le compte d'un utilisateur.
+
+Vous avez déjà votre avatar si vous souhaitez en déposer un puis vos prénom et nom pour être sur que ce soit bine votre compte.
+
+En dessous nous trouverons les restaurants favoris, qui regroupe les trois derniers restaurant ou des commandes ont été passé avec la date et une description.
+Un bouton vous permet rapidement de retourner sur la page de ces restaurants pour profiter d'une nouvelle commande.
+
+Nous passons ensuite aux factures des dernières commandes pour des raisons technique, sur grand écran vous n'affichez que les 4 dernières commandes et sur gsm les deux dernières, mais un bouton vous permet de télécharger vos factures et un autre d'accéder a l'historique de touts vos commandes.
+
+Nous arrivons enfin aux informations les plus sensibles, vos coordonnées entièrement modifiable via des commandes intuitives vous avez en plus de votre adresse de facturation la possibilité de rentrer plusieurs adresses de livraisons et des commentaires pour permettre au livreur de vous retrouver plus facilement.
+
+Enfin viennent les information de paiement sur la gauche vous aurez des infos sur les modes de paiement déjà enregistré ici une carte bancaire et a droite, la possibilité de modifier ou ajouter un mode de paiement, vous pouvez ainsi payer une commande en CB et la suivant via PayPal si vous avez effectué une vente sur eBay par exemple.
+
+Nous n'avons pas oublié, disponible en bas de chaque page un acces aux mentions obligatoires que vos vous présenter Guillaume
