@@ -1,5 +1,5 @@
 const citySelectIndex = document.getElementById("default-search");
 
-citySelectIndex.addEventListener("change", function () {
-    localStorage.setItem("citySelected", citySelectIndex.value);
-})
+citySelectIndex.addEventListener("change", () => {
+	localStorage.setItem("citySelected", citySelectIndex.value);
+});
