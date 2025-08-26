@@ -7,14 +7,14 @@ const carouselContainer = document.querySelector(".carousel-container");
 
 // tableau des images
 const images = [
-	"assetes/images/burger.jpg",
-	"assetes/images/bretzel.jpg",
-	"assetes/images/choucroute.jpg",
-	"assetes/images/flam.jpg",
-	"assetes/images/Baeckeoffe.jpg",
-	"assetes/images/gouglof.png",
-	"assetes/images/pates.jpg",
-	"assetes/images/quiche-lorraine.jpg",
+	"public/images/burger.jpg",
+	"public/images/bretzel.jpg",
+	"public/images/choucroute.jpg",
+	"public/images/flam.jpg",
+	"public/images/Baeckeoffe.jpg",
+	"public/images/gouglof.png",
+	"public/images/pates.jpg",
+	"public/images/quiche-lorraine.jpg",
 ];
 
 // Fonction pour la creation du carousel
