@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Les meilleurs restaurants du Grand Est, livrés chez vous ! Trouvez facilement des adresses incontournables avec des options végétariennes et locales.">
-    <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
-    <meta name="author" content="Wilders Grand'EST">
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta name="author" content="Wilders Grand'EST">    
     <title>Fourch'Est - Nos Restaurant</title>
 
 </head>
@@ -21,7 +20,7 @@
             <a href="log.html"><svg class="h-8 text-white absolute top-2 right-0 w-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="bg-black" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
             </svg></a>
-            <a href="index.html"><img src="/public/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex" /></a>
+            <a href="index.html"><img src="/images/FourchEst_Logo.png" alt="logo Fourch'Est" class="mt-5 mb-7 w-50 flex" /></a>
         </nav>
     </header>
 
@@ -56,16 +55,23 @@
         </div>
 
         <div class="flex justify-center my-5 space-x-2 mb-10 mt-10 flex-wrap">
-            <button type="submit" class="px-6 py-2 bg-gray-100 active:bg-[#191998] rounded-md">
-            <select name="city" id="city-select">
-            <option value="Ville">Toutes les villes</option>
-            <option value="Nancy">Nancy</option>
-            <option value="Reims">Reims</option>
-            <option value="Strasbourg">Strasbourg</option>
-            <option value="Metz">Metz</option>
-            </select></button>
-            <button type="submit" id="valider" class="px-6 py-2 bg-gray-100 active:bg-[#191998] rounded-md transition duration-300 hover:scale-110">Valider</button>
-        </div>
+  <div class="px-6 py-2 bg-gray-100 rounded-md">
+    <label for="city-select" class="sr-only">Ville</label>
+    <select name="city" id="city-select" class="bg-transparent">
+      <option value="Ville">Toutes les villes</option>
+      <option value="Nancy">Nancy</option>
+      <option value="Reims">Reims</option>
+      <option value="Strasbourg">Strasbourg</option>
+      <option value="Metz">Metz</option>
+    </select>
+  </div>
+
+  <button type="button" id="valider"
+          class="px-6 py-2 bg-gray-100 active:bg-[#191998] rounded-md transition duration-300 hover:scale-110">
+    Valider
+  </button>
+</div>
+
 
         <!-- Liste des restaurants -->
         <div id="cardContainer" class="section2 flex flex-col md:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -77,7 +83,7 @@
 <a href="#" 
    class="fixed bottom-16 right-5 w-12 h-12 hidden z-50"
    data-role="scroll-arrow">
-    <img src="/public/images/up.png" alt="Retour en haut" class="w-full h-full object-contain">
+    <img src="/images/up.png" alt="Retour en haut" class="w-full h-full object-contain">
 </a>
 
 
@@ -155,27 +161,29 @@
         </div>
       </footer>
 
-    <script type="module" src="./src/main.js"></script>
+    <!-- ✅ Vite: scripts ESM (defer implicite) -->
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/restaurant1.js"></script>
 
-    <!-- JS pour le menu filtre -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropdownToggle = document.getElementById("dropdownMenuButton");
-            const dropdownMenu = document.getElementById("dropdownMenu");
+  <!-- JS pour le menu filtre — ✅ garde-fou si l’UI n’existe pas -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const dropdownToggle = document.getElementById("dropdownMenuButton");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+      if (!dropdownToggle || !dropdownMenu) return; // éléments absents sur cette page
 
-            dropdownToggle.addEventListener("click", function (event) {
-                event.stopPropagation();
-                dropdownMenu.classList.toggle("hidden");
-            });
+      dropdownToggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+        dropdownMenu.classList.toggle("hidden");
+      });
 
-            document.addEventListener("click", function (event) {
-                if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                    dropdownMenu.classList.add("hidden");
-                }
-            });
-        });
-    </script>
-    <script src="restaurant1.js"></script>
+      document.addEventListener("click", (event) => {
+        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.add("hidden");
+        }
+      });
+    });
+  </script>
 
 
  <!---------------------------Background--------------------->
