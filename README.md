@@ -1,21 +1,88 @@
-PROJET 1
+# Fourch’Est
 
-FourchEst.
+Projet de groupe (2 semaines) réalisé par 5 Wilders durant le Bootcamp **Développeur Web Full-Stack** (Wild Code School, 2025).
 
-Projet sur deux semaines, avec une équipe de 5 Wilders, tous ensemble lors du Bootcamp Développeur Web Full Stack de Mars a Août 2025 avec la Wild Code School
+**But :** prototyper un mini “Uber-Eats like” centré sur la **région Grand Est**, en front-only (**HTML/CSS/Tailwind + JS**).  
+Ce projet est **pédagogique** (contenus et données fictifs), il sert à pratiquer l’intégration, la structuration d’un petit front, et le travail en équipe (Git/GitHub).
 
-Nous avons décidé de développer quelques pages d'un site sur le principe de Uber Eat, mais sur le thème de la région grand est avec la reprise de la charte de couleurs du logo grand est.
-Pages en .html et mise ne forme .css avec framework Tailwind CSS pour la mise en forme et un peux de Java Script pour des animations ou l'affichage de certains éléments.
+---
 
-Le principe était de pouvoir évaluer nos connaissances acquises sur le premier mois de formation, notre capacité de travailler en équipe avec Github et gérer notre temps pour rendre un projet cohérent en fonctionnel.
-Les maquettes du projet avait été initialement réalisé sur Figma.
+## ✨ Contenu & pages
 
+- **Accueil** : `index.html`
+- **À propos** : `about.html`
+- **Compte / login** : `account.html`, `log.html`
+- **Restaurants** : `restaurant.html` (et scripts associés)
+- **Commande** : `order.html`, `final-order.html`
 
-Color blue = 191998
+JavaScript “léger” pour les interactions et validations :
+`index.js`, `about.js`, `account.js`, `order.js`, `restaurant1.js`, `validation.js`, `src/main.js`
 
-Color yellow = FFC94F
+---
 
-Font = gotham
+## 🧱 Stack
 
-Titre en Shrikhan et texte en gotham 
-font logo = https://fonts.google.com/specimen/Shrikhand
+- **HTML** + **Tailwind CSS** + **JavaScript**
+- **Vite** (dev server / build)
+- Aucune API : données **statiques** (images en `public/images`)
+
+**Charte rapide**
+- Couleurs : `#191998` (blue), `#FFC94F` (yellow)
+- Typo titres : [Shrikhand](https://fonts.google.com/specimen/Shrikhand)
+- Typo texte : *Gotham* (à défaut, une alternative libre type **Montserrat**/**Inter**)
+
+---
+
+## 🚀 Démarrage
+
+> Prérequis : Node 18+ (reco : 20+), npm
+
+```bash
+npm install
+npm run dev
+Build prod : npm run build
+
+Preview du build : npm run preview
+
+📁 Structure (extrait)
+pgsql
+Copier le code
+.
+├─ assetes/                 # assets divers (dossier projet)
+├─ dist/                    # build Vite
+├─ node_modules/
+├─ public/
+│  └─ images/               # images statiques
+├─ src/
+│  └─ main.js               # bootstrap JS (si utilisé)
+├─ about.html
+├─ about.js
+├─ account.html
+├─ account.js
+├─ final-order.html
+├─ index.html
+├─ index.js
+├─ log.html
+├─ order.html
+├─ order.js
+├─ restaurant.html
+├─ restaurant1.js
+├─ validation.js
+├─ package.json
+├─ vite.config.js
+└─ README.md
+Remarque : le dossier assetes/ contient vos ressources de projet ; les images publiques sont dans public/images.
+
+👥 Équipe
+Arnaud D. — Recenseur de restaurants
+
+David dM. — Artificier en chef
+
+Guillaume Z. — Happiness manager
+
+Quentin B. — Background artist
+
+Rahmoun D. — Ingénieur carrousel
+
+📜 Licence
+MIT
