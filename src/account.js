@@ -6,7 +6,7 @@ const lastresto = [
 	{
 		date: "27 Mars",
 		nameofresto: "Aux armes de strasbourg",
-		picture: "./public/images/resto2.jpg",
+		picture: "/images/resto2.jpg",
 		descriimg: "aux armes de strasbourg",
 		title:
 			"Découvrez la cuisine généreuse et savoureuse du Chef Alain Ehrhardt",
@@ -18,7 +18,7 @@ const lastresto = [
 	{
 		date: "21 mars",
 		nameofresto: "Brasserie l excelsior",
-		picture: "./public/images/resto1.jpg",
+		picture: "/images/resto1.jpg",
 		descriimg: "excelsior nancy",
 		title: "Un Art de Vivre Nancéien",
 		description: "Véritable temple de l’Art Nouveau depuis 1911",
@@ -28,7 +28,7 @@ const lastresto = [
 	{
 		date: "20 mars",
 		nameofresto: "Restaurant les Chauvins Père&Fils",
-		picture: "./public/images/resto17.jpg",
+		picture: "/images/resto17.jpg",
 		descriimg: "Les chauvins strasbourg",
 		title: "Alsacez vos papilles",
 		description: "Restaurant Tapas alsaciennes à Strasbourg",
